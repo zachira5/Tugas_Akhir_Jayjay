@@ -33,18 +33,5 @@ jobs:
       
     - name: Execute Test
       run: ./gradlew apiTest
-      
-    - name: Archive test result
-      uses: actions/upload-artifact@v4.3.0
-      if: always()
-      with:
-       name: cucumber report
-       path: report
-      
-    - name: Deploy report to Github Pages
-      if: always()
-      uses: peaceiris/actions-gh-pages@v3.9.3
-      with:
-       PERSONAL_TOKEN: ${{ secrets.DEPLOY_SELENIUM }}
-       PUBLISH_DIR: report
+    
    
