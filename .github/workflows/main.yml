@@ -5,10 +5,10 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
+  workflow_dispatch:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
    
 
@@ -28,4 +28,4 @@ jobs:
       run: chmod +x gradlew
       
     - name: Execute Test
-      run: ./gradlew build
+      run: ./gradlew apiTest
