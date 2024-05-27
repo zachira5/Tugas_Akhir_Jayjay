@@ -28,7 +28,7 @@ Feature: Test automation dummy api
     And response body match with json schema "JsonSchemaPostUser.json"
 
   @api
-  Scenario: test update user (user input incorrect email)
+  Scenario: test update user
     Given prepare url for "POST_USER"
     When hit api post request
     Then response code will be 200
